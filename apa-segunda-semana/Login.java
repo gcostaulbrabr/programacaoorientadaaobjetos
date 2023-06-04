@@ -11,10 +11,10 @@ public class Login {
         try (Scanner scanner = new Scanner(System.in)) {
             for (int i = 1; i <= TENTATIVAS; i++) {
                 System.out.println("Digite seu login:");
-                String login = scanner.next();
+                String login = scanner.nextLine();
 
                 System.out.println("Digite sua senha:");
-                String senha = scanner.next();
+                String senha = scanner.nextLine();
 
                 logado = login.equals(LOGIN) && senha.equals(SENHA);
                 if (logado) {

@@ -11,7 +11,7 @@ public class Aposentadoria {
             System.out.println("Digite sua idade, em anos:");
             idade = scanner.nextInt();
             System.out.println("Digite o seu sexo (masculino/feminino/outros):");
-            sexo = scanner.next();
+            sexo = scanner.nextLine();
             System.out.println("Digite o tempo de contribuição, em anos:");
             tempoContribuicao = scanner.nextInt();
         }

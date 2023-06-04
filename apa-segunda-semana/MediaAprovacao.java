@@ -1,20 +1,22 @@
 // Questão 03 - Cálculo de média e aprovação
 
+import java.math.BigDecimal;
+
 import javax.swing.JOptionPane;
 
 public class MediaAprovacao {
-    private static float lerValorFloat(String mensagemAoUsuario) {
+    private static BigDecimal lerValorBigDecimal(String mensagemAoUsuario) {
         String leitura = JOptionPane.showInputDialog(mensagemAoUsuario);
-        return Float.parseFloat(leitura);
+        return new BigDecimal(leitura);
     }
 
     public static void main(String[] args) {
-        float notaProva1 = lerValorFloat("Digite a nota da Prova 1:");
-        float notaProva2 = lerValorFloat("Digite a nota da Prova 2:");
-        float notaTrabalho = lerValorFloat("Digite a nota da Trabalho:");
+        BigDecimal notaProva1 = lerValorBigDecimal("Digite a nota da Prova 1:");
+        BigDecimal notaProva2 = lerValorBigDecimal("Digite a nota da Prova 2:");
+        BigDecimal notaTrabalho = lerValorBigDecimal("Digite a nota da Trabalho:");
 
-        float media = (notaProva1 + notaProva2 + notaTrabalho) / 3;
-        String resultado = media < 6 ? "reprovado" : "aprovado";
+        BigDecimal media = notaProva1.add(notaProva2).add(notaTrabalho).divide(new BigDecimal(3));
+        String resultado = media.compareTo(new BigDecimal(6)) == -1 ? "reprovado" : "aprovado";
 
         System.out.printf("Média: %.2f\nResultado final: %s\n", media, resultado);
     }
