@@ -1,12 +1,8 @@
 public class MesHardcoded {
-    // Lista gerada no PowerShell 7.3: ([cultureinfo]::GetCultureInfo("pt-BR").DateTimeFormat.MonthNames | % {if (-not [string]::IsNullOrEmpty($_)) { "`"$($_.Substring(0,1).ToUpper())$($_.Substring(1))`"" } } ) -join ',' | clip
-    private final String[] mesesPorExtensoPtBr = {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"};
-
-    // Lista gerada no PowerShell 7.3: ([cultureinfo]::GetCultureInfo("en-US").DateTimeFormat.MonthNames | % {if (-not [string]::IsNullOrEmpty($_)) { "`"$($_.Substring(0,1).ToUpper())$($_.Substring(1))`"" } } ) -join ',' | clip
-    private final String[] mesesPorExtensoEnUs = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
-
     private final String[][] mesesPorExtenso = {
+            // Lista gerada no PowerShell 7.3: ([cultureinfo]::GetCultureInfo("pt-BR").DateTimeFormat.MonthNames | % {if (-not [string]::IsNullOrEmpty($_)) { "`"$($_.Substring(0,1).ToUpper())$($_.Substring(1))`"" } } ) -join ',' | clip
             {"Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"},
+            // Lista gerada no PowerShell 7.3: ([cultureinfo]::GetCultureInfo("en-US").DateTimeFormat.MonthNames | % {if (-not [string]::IsNullOrEmpty($_)) { "`"$($_.Substring(0,1).ToUpper())$($_.Substring(1))`"" } } ) -join ',' | clip
             {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"}
     };
 
